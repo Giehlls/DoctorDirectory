@@ -1,3 +1,15 @@
+
+
+
+/*In CoreIdentityForm, we simply check one state variable, and if it is true, we render this class,
+    where prop dataHandler={this.getFileDetails.bind(this)} and handleHideModal={this.handleHideModal}
+
+{this.state.showModal ? <UploadIpfsFile pubKey={this.state.pubKey} dataHandler={this.getFileDetails.bind(this)} handleHideModal={this.handleHideModal}/> : null}
+
+*/
+
+
+
 import React from 'react';
 
 class UploadIpfsFile extends React.Component {
