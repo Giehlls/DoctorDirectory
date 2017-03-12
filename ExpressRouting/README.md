@@ -1,4 +1,4 @@
-# Digital Twin / Ballot 
+# Twin & Ballot 
 
 ## Ballot (ballot.js)
 - [ ] TODO : Should create Ballot.sol instance
@@ -9,7 +9,7 @@
 - Ballot app submit the data via HTTP request (POST) request to Digital Twin
 - runs in 8082 port
 
-## Digital Twin (index.js)
+## Twin (index.js)
 
 - Runs on 5050 port
 - Digital Twin is now capabale of handle multiple contract through (route, filter, rewritePath)
