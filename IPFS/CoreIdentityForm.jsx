@@ -7,7 +7,12 @@ getFileDetails and handleHideModal are defined before they are passed as prop to
 
 LOOK at the  *CoreIdentity* class and see how it uses the *UniqueIdAttributesForm class to gather ipfs hashes, sha hashes, and labels..
 
-as we add more Dimension attributes, we end up shifting tmpFile and inputs
+as we add more attributes, we end up shifting the state vars 'tmpFile' and 'inputs'
+
+'showModal' is the boolean thats always checked, and if true, the UploadIpfsFile class is rendered.
+**Remember anytime you need to execute javascript in the render methods return, (like to build a list with an array), put the js code in inside curly brackets. {} 
+
+{this.state.showModal ? <UploadIpfsFile pubKey={this.state.pubKey} dataHandler={this.getFileDetails.bind(this)} handleHideModal={this.handleHideModal}/> : null}
 
     file_attrs looks like: [{key: "IPFS_hash | shaHash}]
         [{"input-0":"QmPcY8sJ8hSfWhzqX8iLzQEbgiESjqTaeEEoJUrZwhLNk5|9bb7e24956771c4f1bbfe5eceff9e9e1457fafa5d3af3a56f4d7cef0bdd509dc"},
