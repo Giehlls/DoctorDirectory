@@ -1,5 +1,3 @@
-#BIGCHAIN IS INSTALLED IN 10.101.114.230 (10.100.98.217)
-
 
 #Flask is the library that allows one to make a RESTful service in Python
 import flask
