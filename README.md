@@ -2,7 +2,7 @@ This branch holds the submission "Trust My Identity" for the ONC Code-A-Thon
 
 You will need 3 servers to run this submission:
 
-1 Webserver for the DocApp with angularJS and Express
+1 Webserver for the DocApp with angularJS and Express with IPFS intergation (see their repo for details -- https://github.com/ipfs/ipfs)
 
 1 Eris Server for the Functional Blockchain facilitating the identity management of Healthcare Ecosystem participants, in       particular providers. You will need to install Eris-DB (see their repo for details -- https://github.com/eris-ltd) and Express.
 
