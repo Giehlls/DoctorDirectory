@@ -1,27 +1,20 @@
-# DoctorDirectory
-snippets for creating a medical directory
+This branch holds the submission "Trust My Identity" for the ONC Code-A-Thon
 
-Curve library:
-https://github.com/cryptocoinjs/secp256k1-node
+You will need 3 servers to run this submission:
 
-Keccak256 (from js-sha3):
-https://github.com/emn178/js-sha3
+1 Webserver for the DocApp with angularJS and Express
 
+1 Eris Server for the Functional Blockchain facilitating the identity management of Healthcare Ecosystem participants, in       particular providers. You will need to install Eris-DB (see their repo for details -- https://github.com/eris-ltd) and Express.
 
-TO CHECK IF A PROCESS IS RUNNING:
+1 BigChain DB for the Big Data Blockchain hold the bulk of the data and providing detailed data audit trains of changes. You will need to install BigChain (see their repo for details -- https://github.com/bigchaindb/bigchaindb)
 
-    ps -ef | grep $app
-    
-    (ex:)
-    
-    ps -ef | grep bigchain
+Key Solution Features:
+- Smart Contract DOUG System to facilitate decentralized secure identity management on a functional Blockchain platform (Eris)
 
+- Provider Identity claim attestations (Education, Licensing, Affiliations etc.) through digial signaturs of attesters (payors, hospitals, licensing agencies etc.) without one or more central organizations.
 
+- Secure API for BigChain DB - Eris integration (Mapping User Public Keys to a BigChain DB account public/private key pair in an   encrypted manner) to utilize BigChain as a Blockchain secured No-SQL Big Data solution for provider identity data and its audit trail. Functional and Big Data Blockchain separation enables delinking of data sets.
 
-If rethinkDB stops,
-    sudo /etc/init.d/rethinkdb restart
-    
-If you need to start bigchain:
-    nohup bigchaindb start &
+- Secure Identity Claim proof sharing through IPFS without moving data around between ecosystem participants.
 
-    (nohup is no hangup and so you will not have to start it again)
+A similar solution for broader usage of Digital Identity of individuals and things has been developed by TCS in a different context: https://youtu.be/pULIyELKzUA  
