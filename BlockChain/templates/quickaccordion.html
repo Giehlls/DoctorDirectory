@@ -1,0 +1,50 @@
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1> <a href="#/home">DocApp</a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href='#/viewdoctor'>ViewDoctor</a></li>
+   </ul> 
+   <section class="top-bar-section">
+      <ul class="right">
+        <li><a class="active" href="#">Home</li>
+        <li><a href="#">Add Doctor</li>
+        <li><a href="#">Add Organization</li>
+        <li><a href="#">Logout</li>
+      </ul> 
+   </section>  
+
+</nav>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row">
+<div class="small-2 columns">
+</div>
+<div class="small-8 columns">
+  <dl class="accordion" data-accordion>
+  <dd>
+    <a ng-click="toggleAccordion('panel1')">Provider Details</a>
+    <!--<div id="panel1" class="content active">-->
+    <div class="content" ng-init="accordion.panel1 = true" ng-class="{'active': accordion.panel1}">
+       (content: part 1)
+    </div>
+  </dd>
+  <dd>
+    <a ng-click="toggleAccordion('panel2')">Primary Speciality</a>
+    <!---<div id="panel2" class="content">-->
+    <div class="content" ng-class="{'active': accordion.panel2}">
+       (more: part 2)
+    </div>
+  </dd>
+  <dd>
+    <a ng-click="toggleAccordion('panel3')">Contact</a>
+    <!--<div id="panel3" class="content">-->
+      <div class="content" ng-class="{'active': accordion.panel3}">
+       (even more: part 3)
+    </div>
+  </dd>
+</dl>
+</div>
+<div class="small-2 columns"></div>
+</div>

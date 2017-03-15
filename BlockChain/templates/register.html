@@ -1,0 +1,172 @@
+
+<section>
+  <h4 class="text-center">{{message}}</h4>
+<form name="regform" ng-submit="register()" novalidate>
+
+    <!-- <div class="textintro">
+      <h1>{{message}}</h1>
+    </div> -->
+<div class="row">
+  <div class="medium-6 large-6 columns">
+
+        
+      <fieldset>
+        <label>Email
+          <input type="email" name="email" placeholder="batman@wayne.com" ng-model="user.email" ng-required="true">
+          <p class="error" ng-show="regform.email.$invalid && regform.email.$touched">Must be a valid email</p>
+        </label>
+        <label>NPI
+          <input type="text" name="ProviderTin" placeholder="999999999" ng-model="user.ProviderTin" ng-required="true">
+          <p class="error" ng-show="regform.ProviderTin.$invalid && regform.ProviderTin.$touched">ProviderTin required</p>
+        </label>
+        <label>LastName
+          <input type="text" name="lastname" placeholder="Wayne" ng-model="user.lastname" ng-required="true">
+           <p class="error" ng-show="regform.lastname.$invalid && regform.lastname.$touched">lastname required</p> 
+        </label>
+        
+        <label>FirstName
+          <input type="text" name="FirstName" placeholder="Bruce" ng-model="user.FirstName" ng-required="true">
+           <p class="error" ng-show="regform.FirstName.$invalid && regform.FirstName.$touched">FirstName required</p> 
+        </label>
+        <!-- <label>Tax Id
+          <input type="text" name="provId" placeholder="Bruce" ng-model="user.provID" ng-required="true">
+           <p class="error" ng-show="regform.provId.$invalid && regform.provId.$touched">Tax ID required</p> 
+        </label> -->
+       </fieldset> 
+  </div>
+  <div class="medium-6 large-6 columns">      
+      <fieldset>
+        <label>Primary Speciality
+          <input type="text" name="Speciality" placeholder="Anesthesiology" ng-model="user.Speciality" ng-required="true">
+           <p class="error" ng-show="regform.Speciality.$invalid && regform.Speciality.$touched">Speciality required</p> 
+        </label>
+        <label>Secondary Speciality
+          <input type="text" name="SecSpeciality" placeholder="Internal medicine" ng-model="user.SecSpeciality" ng-required="true">
+          <!-- <p class="error" ng-show="regform.SecSpeciality.$invalid && regform.SecSpeciality.$touched">Secondary Speciality required="true"</p> -->
+        </label>
+        <label>Tertiary Speciality
+          <input type="text" name="TerSpeciality" placeholder="Pulmonary Disease" ng-model="user.TerSpeciality" ng-required="true">
+          <!-- <p class="error" ng-show="regform.TerSpeciality.$invalid && regform.TerSpeciality.$touched">STertiary peciality required="true"</p> -->
+        </label>
+        <label>Phoname
+          <input type="tel" name="tel" pattern='[\(]\d{3}[\)][\-]\d{3}[\-]\d{4}' placeholder="(xxx)-xxx-xxxx" ng-model="user.tel" ng-required="true">
+          <p class="error" ng-show="regform.tel.$invalid && regform.tel.$touched">Enter Valid PhoneNumber</p>
+        </label>
+        <label>Address
+          <input type="text" name="address" placeholder="900 Cottage Groove Rd,Bloomfield,CT-06095" ng-model="user.password" ng-required="true">
+          <p class="error" ng-show="regform.address.$invalid && regform.address.$touched">Address is required</p>
+
+        </label>
+        <!-- <input type="file" name="upload" ng-model="user.file" ng-required="true"> -->
+      </fieldset>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-4 large-4 columns">
+      <h4 class="text-center">Network</h4>
+      <fieldset>
+      <!--   <label>Parent Name
+          <input type="email" name="email" placeholder="batman@wayne.com" ng-model="user.email" ng-required="true">
+          <p class="error" ng-show="regform.email.$invalid && regform.email.$touched">Must be a valid email</p>
+        </label>
+       -->  
+       <label>Network 
+          <select id="network" ng-model="provider.network" multiple>
+              <option value="Aetna">Aetna</option>
+              <option value="BCBS">Carefirst BCBS</option>
+              <option value="UnitedHealthCare">United Healthcare</option>
+              <option value="Humana">Humana</option>
+          </select>
+        </label>
+         <label>Payer ID 
+          <select id="payerID" ng-model="provider.payerID" multiple>
+              <option value="888008001">888008001</option>
+              <option value="888008002">888008002</option>
+              <option value="888008003">888008003</option>
+              <option value="Humana">888008004</option>
+          </select>
+        </label>
+        
+         <label>pubKey 
+          <select id="pubKey" ng-model="provider.pubKey" multiple>
+              <option value="02adb8ebb097b8d5b25953515864faf497a2b23383f319cbac92046739035ca340">02adb8ebb097b8d5b25953515864faf497a2b23383f319cbac92046739035ca340</option>
+              <option value="021ffe6bc6ab810304a2056a221268af5442a3902d1b3b169e6b7b38bddb936e5d">021ffe6bc6ab810304a2056a221268af5442a3902d1b3b169e6b7b38bddb936e5d</option>
+              <option value="02776fb1988a1b6e4c2f1e7f28a76d90b682319ac68f483451af86bf0ac226897c">02776fb1988a1b6e4c2f1e7f28a76d90b682319ac68f483451af86bf0ac226897c</option>
+              <option value="02e3e99397ae0b181fbbf51d0807e7aa4288a2225a8b5a8f8cb0569b2b9b8208a9">02e3e99397ae0b181fbbf51d0807e7aa4288a2225a8b5a8f8cb0569b2b9b8208a9</option>
+          </select>
+        </label>
+        
+        <label>Start Date 
+          <input type=date step=7 min=2014-09-08>
+        </label>
+      </fieldset>
+  </div>
+
+  <div class="medium-4  large-4  columns">
+
+        <h4 class="text-center">Education</h4>
+      <fieldset>
+        <label>Degree
+          <input type="text" name="degree" placeholder="DEA Licensce" ng-model="user.degree" ng-required="true">
+          <p class="error" ng-show="regform.degree.$invalid && regform.degree.$touched">Degree Required</p>
+        </label>
+        <label>Institution 
+          <input type="text" name="univ" placeholder="George Washington University" ng-model="user.univ" ng-required="true">
+          <p class="error" ng-show="regform.univ.$invalid && regform.univ.$touched">Institution Required</p>
+        </label>
+        <label>Institution PubKey 
+          <input type="text" name="univPubkey" placeholder="George Washington University" ng-model="user.univPubkey" ng-required="true">
+          <p class="error" ng-show="regform.univPubkey.$invalid && regform.univPubkey.$touched">Institution Required</p>
+        </label>
+      </fieldset>
+  
+  </div>
+  <div class="medium-4  large-4  columns">
+
+        <h4 class="text-center">Affiliation</h4>
+      <fieldset>
+        <label>Affiliaton Type
+          <input type="text" name="type" placeholder="Hospital" ng-model="user.type" ng-required="true">
+          <p class="error" ng-show="regform.type.$invalid && regform.type.$touched">Degree Required</p>
+        </label>
+        <label>Institution TIN 
+          <input type="text" name="org" placeholder="888008001" ng-model="user.org" ng-required="true">
+          <p class="error" ng-show="regform.org.$invalid && regform.org.$touched">Institution Required</p>
+        </label>
+        <label>Affiliaton ID
+          <input type="text" name="afftin" placeholder="9999999999" ng-model="user.afftin" ng-required="true">
+          <p class="error" ng-show="regform.afftin.$invalid && regform.afftin.$touched">Degree Required</p>
+        </label>
+        <label>Institution pubKey
+          <input type="text" name="affPubKey" placeholder="888008001" ng-model="user.affPubKey" ng-required="true">
+          <p class="error" ng-show="regform.affPubKey.$invalid && regform.affPubKey.$touched">Institution Required</p>
+        </label>
+      </fieldset>
+  
+  </div>
+<div class="row">
+  <div class="medium-6 large-6 columns">
+   <a></a>
+   </div>
+  <div class="medium-6 large-6 columns">
+   <a></a>
+   </div>
+</div>    
+
+ <div class="row"> 
+   <div class="medium-12 medium-centered large-4 large-centered columns">
+
+        <!-- <input id="show-password" type="checkbox"><label for="show-password">Show password</label> -->
+
+        <p><!-- a type="submit" class="button expanded">Register</a> --><!-- <button type="button" class="success button">Register</button> -->
+          <input type="submit" id="submit" class="button expanded" value="Register" /></p>
+    </div>      
+  </div>
+</form>
+</section>
+
+
+<!--<script>
+  $('#myModal').foundation('reveal', 'open', 'http://localhost/simple/');
+</script>-->

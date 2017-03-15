@@ -1,0 +1,13 @@
+.padding-general { margin-bottom:10px; }
+
+table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+    display: table-cell;
+    line-height: 2.125rem;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 2rem 2rem 2rem;
+}
+
+body: {
+	background:#f1f1f1;
+}	

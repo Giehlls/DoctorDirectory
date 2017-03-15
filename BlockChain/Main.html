@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app"mainApp">
+   
+   <head>
+      <!--<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>-->
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+      <script src="js/app.js"></script>
+      <script src="controllers/AddDoctorController.js"></script>
+      <script src="controllers/ViewDoctorController.js"></script>
+       <script src="controllers/homeController.js"></script>
+      <script src="controllers/loginController.js"></script>
+       <script src="js/vendor/modernizr.js"></script>
+
+   </head>
+   
+   <body>
+      <p>{{message}}</p>
+      <div ng-view>
+         
+      </div>
+      <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script sr="js/foundation/foundation.topbar.js"></script>
+    <script>
+    $(document).ready
+    ({ $(document).foundation();});
+     
+    </script>
+   </body>
+</html>
